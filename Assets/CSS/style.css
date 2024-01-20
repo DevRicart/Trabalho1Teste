@@ -1,0 +1,380 @@
+:root {
+  --swiper-theme-color: white;
+  --swiper-pagination-bullet-size: 10px;
+}
+
+@font-face {
+  font-family: 'Bebas';
+   src: url('../Fonts/BebasNeue-Bold.otf') format('opentype'), url('../Fonts/BebasNeue-Bold.ttf') format('truetype');
+   font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../Fonts/BebasNeue-Regular.otf') format('opentype'), url('../Fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('../Fonts/BebasNeue-Light.otf') format('opentype'), url('../Fonts/BebasNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/*==================== Nav ====================*/
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #08A8F0;
+  height: 8vh;
+  width: 100vw;
+  z-index: 99;
+}
+
+.navigator img {
+  width: 48px;
+  height: 24px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+
+  width: 45px;
+  height: 45px;
+
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  border-radius: .5rem;
+  transition: 0.3s;
+
+}
+/*==================== Nav animations ====================*/
+@media (max-width: 999px) {
+ 
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 40vw;
+    height: 10000px;
+    background: #08A8F0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 6.25rem;
+    transform: translateX(-250%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu div.active {
+  background-color: #0071C9;
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/*==================== Banner ====================*/
+
+.banner__section {
+  margin-top: 4.2vh;
+  height: 200px;
+}
+
+.banner__section .swiper-slide img {
+  height: 200px;
+  width: 100vw;
+}
+
+/* swiper customization */
+.swiper-pagination-bullet {
+  border: 1px solid black;
+}
+
+/*==================== MAIN ====================*/
+/*==================== SHOPPING ====================*/
+.shopping__section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.shopping__section h1 {
+  font-size: 24px;
+  font-family: 'Bebas', sans-serif;
+  font-weight: 700;
+  color: #005794;
+}
+
+.shoppings {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.shopping {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #08A8F0;
+  color: white;
+  max-width: 160px;
+
+  padding: 30px 10px 15px;
+
+}
+
+.shopping img {
+  margin-bottom: 10px;
+}
+
+.online img {
+  width: 60px;
+  height: 42px;
+}
+
+.in-person img {
+  width: 27px;
+  height: 42px;
+}
+
+.shopping h3 {
+  font-family: 'Bebas';
+  font-size: 14px;
+}
+
+.shopping p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 7px;
+  margin-bottom: 20px;
+}
+
+.shopping div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #F00879;
+  border-radius: 3px;
+  width: 50px;
+  height: 16px;
+}
+
+.shopping div a {
+  font-family: 'Bebas';
+  font-size: 10px;
+}
+/*==================== ENCARTE ====================*/
+
+.encarte__section {
+  text-align: center;
+  background-color: #08A8F0;
+  margin-top: 2rem;
+  height: 1000px;
+}
+
+.encarte__section h1 {
+  font-family: 'Bebas';
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*==================== FUNCIONAAAA ====================*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* .card__container {
+  padding-block: 5rem;
+} */
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  position: relative;
+  background-color: white;
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+}
+
+.card__data {
+  background-color: #EF009B;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__name {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: white;
+}
+
+
+/* Swiper class */
+.card__container .swiper-button-prev:after,
+.card__container .swiper-button-next:after {
+  content: "";
+}
+
+.card__container .swiper-button-prev,
+.card__container .swiper-button-next {
+  font-size: 3rem;
+  color: white;
+
+}
+
+.card__container .swiper-button-prev {
+  left: 0;
+}
+
+.card__container .swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .card__container .swiper-button-next,
+  .card__container .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .card__container .swiper-button-prev {
+    left: -1rem;
+  }
+  .card__container .swiper-button-next {
+    right: -1rem;
+  }
+}
