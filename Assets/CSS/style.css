@@ -418,7 +418,6 @@ article:hover .card__name {
   font-size: 1rem;
   font-weight: 400;
   color: #005794;
-  margin-bottom: 2rem;
 }
 
 .trade__section .trade__content {
@@ -458,10 +457,12 @@ article:hover .card__name {
 }
 
 .trade__swiper .swiper-button-prev {
+  top: 3.2rem;
   left: 0;
 }
 
 .trade__swiper .swiper-button-next {
+  top: 3.2rem;
   right: 0;
 }
 
