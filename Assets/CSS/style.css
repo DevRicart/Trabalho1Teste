@@ -53,7 +53,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   background: #08A8F0;
-  height: 8vh;
+  height: 6vh;
   width: 100vw;
   padding: 1rem;
 }
@@ -93,7 +93,7 @@ a:hover {
   .menu {
     display: block;
     position: fixed;
-    top: 8vh;
+    top: 6vh;
     left: 0;
     background: #08A8F0;
     text-align: center;
@@ -160,7 +160,7 @@ a:hover {
 
 /*==================== Banner ====================*/
 .margin {
-  height: 8vh;
+  height: 6vh;
 }
 .banner__section {
   height: fit-content;
@@ -346,13 +346,13 @@ a:hover {
 }
 
 .card__buy a {
-  font-weight: 700;
+  font-weight: 400;
   background: linear-gradient(#08A8F0, #08A8F0, #08A8F0, #08A9F0, #08AAF1, #08ABF1, #08ABF1, #08ACF1, #09ADF2, #09AEF2, #09AFF2, #09B0F2, #09B1F3, #09B1F3, #09B2F3, #09B3F3, #09B4F4, #09B5F4, #09B6F4, #09B6F4, #0AB7F5, #0AB8F5,
   #0AB9F5, #0ABAF5, #0ABBF6, #0ABCF6, #0ABCF6, #0ABDF6, #0ABEF7, #0ABFF7, #0AC0F7, #0AC1F7, #0BC1F8, #0BC2F8,
   #0BC3F8, #0BC4F8, #0BC5F9, #0BC6F9, #0BC7F9, #0BC7F9, #0BC8FA, #0BC9FA, #0BCAFA, #0BCBFA, #0CCCFB, #0CCCFB,
   #0CCDFB, #0CCEFB, #0CCFFC, #0CD0FC, #0CD1FC, #0CD2FC, #0CD2FD, #0CD3FD, #0CD4FD, #0CD5FD, #0DD6FE, #0DD7FE,
   #0DD7FE, #0DD8FE, #0DD9FF, #0DDAFF, #0DDAFF);
-  padding: 5px 20px;
+  padding: 5px 12px;
   border-radius: .3rem;
 }
 
