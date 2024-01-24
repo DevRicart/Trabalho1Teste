@@ -48,6 +48,7 @@ a:hover {
 
 .nav {
   position: fixed;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,8 +56,8 @@ a:hover {
   height: 8vh;
   width: 100vw;
   padding: 1rem;
-  z-index: 99;
 }
+
 
 .nav img {
   width: 48px;
@@ -86,25 +87,22 @@ a:hover {
   position: absolute;
   left: 0;
   margin-left: 10px;
-  
 }
 
 @media (max-width: 600px) {
   .menu {
     display: block;
     position: fixed;
-    z-index: 1;
     top: 8vh;
     left: 0;
     background: #08A8F0;
     text-align: center;
     width: 40vw;
-    height: 0; 
+    height: 0;
+    z-index: 1;
     visibility: hidden;
     overflow-y: hidden;
-    -webkit-box-shadow: 3px 6px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 6px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 3px 6px 5px 0px rgba(0,0,0,0.75);
+
   }
 
   .menu a {
@@ -157,12 +155,13 @@ a:hover {
   }
 }
 
+
 /*==================== Banner ====================*/
 .margin {
   height: 8vh;
 }
-
 .banner__section {
+  height: fit-content;
   background-color: #FFEFFF;
 }
 
@@ -172,15 +171,51 @@ a:hover {
 }
 
 /* swiper customization */
-.swiper-pagination-bullet {
-  border: 1px solid black;
+.swiper-pagination-bullet { 
+  background-color: rgba(73, 73, 73, 0.5) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.trade__section .swiper-pagination-bullet {
+  background-color: #08A8F0 !important;
+  opacity: .5 !important; 
+}
+
+.trade__section .swiper-pagination-bullet-active {
+  background-color: #0071C9 !important;
+  opacity: 1 !important;
+}
+
+/* Swiper class */
+.banner__section .swiper-button-prev:after,
+.banner__section .swiper-button-next:after {
+  content: "";
+}
+
+.banner__section .swiper-button-prev,
+.banner__section .swiper-button-next {
+  font-size: 3rem;
+  color: #FFEFFF;
+}
+
+
+.banner__section .swiper-button-prev {
+  left: 0rem;
+
+}
+
+.banner__section .swiper-button-next {
+  right: 0;
 }
 
 /*==================== MAIN ====================*/
 /*==================== SHOPPING ====================*/
 .shopping__section {
   padding-top: 2rem;
-  padding-bottom: 2.3rem;
+  padding-bottom: 2rem;
   text-align: center;
   background-color: #FFEFFF;
 }
@@ -196,7 +231,7 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .shopping {
@@ -206,83 +241,70 @@ a:hover {
   background-color: #08A8F0;
   color: white;
   width: 140px;
-  height: 240px;
+  height: 230px;
   padding: 30px 10px 15px;
 
-}
-
-.shopping img {
-  margin-bottom: 5px;
 }
 
 .online img {
   width: 80px;
   height: 60px;
-  margin-right: 19px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  margin-right: 20px;
 }
 
 
 .in-person img {
   width: 35px;
   height: 60px;
+  margin-bottom: 13px;
 }
 
 .shopping h3 {
   font-family: 'Bebas';
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .shopping p {
   font-family: 'Poppins', sans-serif;
-  font-size: .6rem;
+  font-size: .5rem;
   margin-bottom: 20px;
-}
-
-.online p {
-  margin-bottom: 35px;
 }
 
 .shopping a {
   font-family: 'Bebas';
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-radius: 3px;
   background-color: #F00879;
-  padding: 3px 6px;
+  padding: 5px 8px;
 }
 /*==================== ENCARTE ====================*/
 
 .encarte__section {
   text-align: center;
-  background: linear-gradient(#08A8F0, #08A8F0, #08A8F0, #08A9F0, #08AAF1, #08ABF1, #08ABF1, #08ACF1, #09ADF2, #09AEF2, #09AFF2, #09B0F2, #09B1F3, #09B1F3, #09B2F3, #09B3F3, #09B4F4, #09B5F4, #09B6F4, #09B6F4, #0AB7F5, #0AB8F5,
-  #0AB9F5, #0ABAF5, #0ABBF6, #0ABCF6, #0ABCF6, #0ABDF6, #0ABEF7, #0ABFF7, #0AC0F7, #0AC1F7, #0BC1F8, #0BC2F8,
-    #0BC3F8, #0BC4F8, #0BC5F9, #0BC6F9, #0BC7F9, #0BC7F9, #0BC8FA, #0BC9FA, #0BCAFA, #0BCBFA, #0CCCFB, #0CCCFB,
-     #0CCDFB, #0CCEFB, #0CCFFC, #0CD0FC, #0CD1FC, #0CD2FC, #0CD2FD, #0CD3FD, #0CD4FD, #0CD5FD, #0DD6FE, #0DD7FE,
-      #0DD7FE, #0DD8FE, #0DD9FF, #0DDAFF, #0DDAFF);
-  display: flex;
-  flex-direction: column;
-  color: white;
+  background: linear-gradient(#08A8F0, #08A8F0, #08A8F0, #08A9F0, #08AAF1, #08ABF1, #08ABF1, #08ACF1, #09ADF2, #09AEF2, #09AFF2, #09B0F2, #09B1F3, #09B1F3, #09B2F3, #09B3F3, #09B4F4, #09B5F4, #09B6F4, #09B6F4, #0AB7F5, #0AB8F5,#0AB9F5, #0ABAF5, #0ABBF6, #0ABCF6, #0ABCF6, #0ABDF6, #0ABEF7, #0ABFF7, #0AC0F7, #0AC1F7, #0BC1F8, #0BC2F8,#0BC3F8, #0BC4F8, #0BC5F9, #0BC6F9, #0BC7F9, #0BC7F9, #0BC8FA, #0BC9FA, #0BCAFA, #0BCBFA, #0CCCFB, #0CCCFB,#0CCDFB, #0CCEFB, #0CCFFC, #0CD0FC, #0CD1FC, #0CD2FC, #0CD2FD, #0CD3FD, #0CD4FD, #0CD5FD, #0DD6FE, #0DD7FE,#0DD7FE, #0DD8FE, #0DD9FF, #0DDAFF, #0DDAFF);
   padding-top: 2rem;
   padding-bottom: 2rem;
+  color: white;
+  font-family: 'Bebas';
 }
 
 .encarte__section h1 {
-  font-family: 'Bebas';
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card__container {
+  padding-inline: 1.75rem;
+  overflow: hidden;
 }
 
 .encarte__section .swiper {
-	height: 350px;
+	height: 360px;
 }
 
 .encarte__section .swiper-slide {
 	height: fit-content;
-}
-
-.encarte__section .swiper-wrapper,
-.trade__section .trade__swiper {
-  width: 90vw;
 }
 
 .card__article {
@@ -294,7 +316,6 @@ a:hover {
 
 .card__image {
   position: relative;
-  padding-top: 1.5rem;
   margin-bottom: -.75rem;
 }
 
@@ -316,29 +337,20 @@ a:hover {
 
 .card__name {
   font-size: 1.4rem;
-  font-family: "Bebas";
-}
-
-.card__description {
-  font-family: 'Bebas';
 }
 
 .card__buy {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .card__buy a {
-  font-size: .8rem;
   font-weight: 700;
   background: linear-gradient(#08A8F0, #08A8F0, #08A8F0, #08A9F0, #08AAF1, #08ABF1, #08ABF1, #08ACF1, #09ADF2, #09AEF2, #09AFF2, #09B0F2, #09B1F3, #09B1F3, #09B2F3, #09B3F3, #09B4F4, #09B5F4, #09B6F4, #09B6F4, #0AB7F5, #0AB8F5,
   #0AB9F5, #0ABAF5, #0ABBF6, #0ABCF6, #0ABCF6, #0ABDF6, #0ABEF7, #0ABFF7, #0AC0F7, #0AC1F7, #0BC1F8, #0BC2F8,
   #0BC3F8, #0BC4F8, #0BC5F9, #0BC6F9, #0BC7F9, #0BC7F9, #0BC8FA, #0BC9FA, #0BCAFA, #0BCBFA, #0CCCFB, #0CCCFB,
   #0CCDFB, #0CCEFB, #0CCFFC, #0CD0FC, #0CD1FC, #0CD2FC, #0CD2FD, #0CD3FD, #0CD4FD, #0CD5FD, #0DD6FE, #0DD7FE,
   #0DD7FE, #0DD8FE, #0DD9FF, #0DDAFF, #0DDAFF);
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: .3rem;
 }
 
@@ -352,12 +364,12 @@ a:hover {
 .card__container .swiper-button-prev,
 .card__container .swiper-button-next {
   font-size: 3rem;
-  color: #005794;
+  color: #FFEFFF;
 }
 
 
 .card__container .swiper-button-prev {
-  left: 0;
+  left: 0rem;
 
 }
 
@@ -418,11 +430,12 @@ article:hover .card__name {
   justify-content: center;
   align-items: center;
   height: 200px;
+  padding-inline: 1.75rem;
 
 }
 
 .trade__img {
-  width: 121px;
+  width: 100px;
 }
 
 .trade__information {
@@ -453,11 +466,11 @@ article:hover .card__name {
 /*==================== SUBSCRIBE ====================*/
 .subscribe__section {
   background: linear-gradient(#08A8F0, #08A8F0, #08A8F0, #08A9F0, #08AAF1, #08ABF1, #08ABF1, #08ACF1, #09ADF2, #09AEF2, #09AFF2, #09B0F2, #09B1F3, #09B1F3, #09B2F3, #09B3F3, #09B4F4, #09B5F4, #09B6F4, #09B6F4, #0AB7F5, #0AB8F5, #0AB9F5, #0ABAF5, #0ABBF6, #0ABCF6, #0ABCF6, #0ABDF6, #0ABEF7, #0ABFF7, #0AC0F7, #0AC1F7, #0BC1F8, #0BC2F8, #0BC3F8, #0BC4F8, #0BC5F9, #0BC6F9, #0BC7F9, #0BC7F9, #0BC8FA, #0BC9FA, #0BCAFA, #0BCBFA, #0CCCFB, #0CCCFB, #0CCDFB, #0CCEFB, #0CCFFC, #0CD0FC, #0CD1FC, #0CD2FC, #0CD2FD, #0CD3FD, #0CD4FD, #0CD5FD, #0DD6FE, #0DD7FE, #0DD7FE, #0DD8FE, #0DD9FF, #0DDAFF, #0DDAFF);
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .titles {
@@ -526,7 +539,7 @@ input {
 }
 
 .contact {
-  margin-left: 1rem;
+  margin-left: 1.2rem;
 }
 
 .social-links {
@@ -535,17 +548,18 @@ input {
 
 .social-links ul {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 .social-link img {
-  width: 27px;
+  width: 25px;
 }
 
 .right-lateral {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: fit-content;
 }
 
 .right-lateral img {
@@ -562,7 +576,7 @@ input {
   font-family: 'Bebas';
   background-color: #EF009B;
   font-size: 1rem;
-  padding: .3rem;
+  padding: .23rem;
   border-radius: .3rem;
 }
 
@@ -574,13 +588,14 @@ input {
   margin-top: 1rem;
   color: #005794;
   font-family: 'Bebas';
-  font-size: 14px;
-  padding-bottom: .4rem;
+  font-size: 0.7rem;
+  padding-bottom: 0.4rem;
 }
 
 .line-top {
   border-top: 0.1px solid #EF009B;
   padding-top: 1rem;
+  margin-bottom: 0.5rem;
   width: 90vw;
 }
 
@@ -605,7 +620,7 @@ input {
 /* For small devices */
 @media screen and (max-width: 320px) {
   .card__data {
-    padding: 1rem;
+    padding: .5rem 0px 2rem 1rem;
   }
 }
 
